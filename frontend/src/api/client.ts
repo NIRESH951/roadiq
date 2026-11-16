@@ -89,9 +89,27 @@ export interface DetectResponse {
   message: string
 }
 
+// Vercel accepts request bodies up to about 4.5 MB, so large phone photos are resized in the browser first.
+async function shrinkPhoto(file: File): Promise<Blob> {
+  if (file.size <= 3_500_000 || typeof createImageBitmap !== 'function') return file
+  try {
+    const bmp = await createImageBitmap(file)
+    const scale = Math.min(1, 2000 / Math.max(bmp.width, bmp.height))
+    const canvas = document.createElement('canvas')
+    canvas.width = Math.round(bmp.width * scale)
+    canvas.height = Math.round(bmp.height * scale)
+    canvas.getContext('2d')?.drawImage(bmp, 0, 0, canvas.width, canvas.height)
+    const blob = await new Promise<Blob | null>((done) => canvas.toBlob(done, 'image/jpeg', 0.9))
+    return blob ?? file
+  } catch {
+    return file
+  }
+}
+
 export async function runDetection(file: File, segmentId: string, t: number, lane: number): Promise<DetectResponse> {
   const form = new FormData()
-  form.append('image', file)
+  const photo = await shrinkPhoto(file)
+  form.append('image', photo, photo === file ? file.name : 'photo.jpg')
   form.append('segment_id', segmentId)
   form.append('t', String(t))
   form.append('lane', String(lane))

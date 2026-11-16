@@ -168,7 +168,9 @@ def _save_image(upload: UploadFile) -> tuple[Path, str]:
         raise HTTPException(400, "The file is not a readable image.")
     name = f"{uuid.uuid4().hex[:12]}.jpg"
     dest = C.UPLOAD_DIR / name
-    img.save(dest, quality=92)
+    if C.ON_VERCEL:
+        img.thumbnail((1600, 1600))
+    img.save(dest, quality=88 if C.ON_VERCEL else 92)
     return dest, f"/uploads/{name}"
 
 
@@ -216,7 +218,7 @@ def detect(image: UploadFile = File(...), segment_id: str = Form(...), t: float 
     db.commit()
     model = city(db)
     seg_row = model.segment_rows[segment_id]
-    return {"inspection_id": ins.id, "image_url": url, "annotated_image_url": annotated_url,
+    return {"inspection_id": ins.id, "image_url": _public_url(path), "annotated_image_url": _public_url(annotated_path),
             "segment_id": segment_id, "road_name": seg_row["road_name"], "position": round(t, 2),
             "detections": [model.defect_rows[i] for i in created],
             "message": ("The model found no damage it recognises in this photo." if not created else
@@ -284,3 +286,12 @@ if DIST.is_dir():
         if full_path and target.is_file() and DIST.resolve() in target.parents:
             return FileResponse(target)
         return FileResponse(DIST / "index.html")
+
+
+def _public_url(path):
+    """On Vercel each request can land on a different instance with its own /tmp, so the detection response
+    carries its images inline (data URLs). Locally they are served from /uploads as before."""
+    if C.ON_VERCEL:
+        import base64
+        return "data:image/jpeg;base64," + base64.b64encode(Path(path).read_bytes()).decode("ascii")
+    return f"/uploads/{Path(path).name}"
