@@ -1,0 +1,17 @@
+node_modules/
+frontend/dist-preview/
+__pycache__/
+*.pyc
+.venv/
+backend/roadiq.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/models/*.pt
+.pytest_cache/
+frontend/dist-static/
+
+
+runs/
+datasets/
+*.pt
+download.py

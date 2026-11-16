@@ -1,0 +1,100 @@
+{
+  "_comment": "DEMONSTRATION DATA ONLY. A fictional city layout with illustrative records used when no real inspection data exists. Every record seeded from this file is stored with source = 'demo'. Dates are stored as days before the seeding date so coverage status stays meaningful.",
+  "meta": {
+    "city_name": "Demo City (fictional layout)",
+    "metres_per_unit": 5,
+    "half_extent": 60,
+    "road_half_width": 4
+  },
+  "roads": [
+    { "code": "LV", "name": "Lake View Road", "axis": "x", "offset": -36, "road_class": "collector" },
+    { "code": "MG", "name": "MG Road", "axis": "x", "offset": 0, "road_class": "arterial" },
+    { "code": "ST", "name": "Station Road", "axis": "x", "offset": 36, "road_class": "collector" },
+    { "code": "SL", "name": "School Lane", "axis": "z", "offset": -36, "road_class": "collector" },
+    { "code": "HA", "name": "Hospital Avenue", "axis": "z", "offset": 0, "road_class": "arterial" },
+    { "code": "MK", "name": "Market Street", "axis": "z", "offset": 36, "road_class": "collector" }
+  ],
+  "segment_breaks": [-60, -36, 0, 36, 60],
+  "segment_attributes": {
+    "HA-2": { "waterlogging_reports": 3, "drainage_complaints": 1 },
+    "SL-2": { "waterlogging_reports": 2 },
+    "MK-3": { "waterlogging_reports": 2, "drainage_complaints": 2 },
+    "LV-3": { "waterlogging_reports": 1 },
+    "MG-3": { "waterlogging_reports": 1 },
+    "LV-2": { "waterlogging_reports": 2, "drainage_complaints": 1 },
+    "SL-1": { "drainage_complaints": 1 },
+    "LV-4": { "survey_tracked": false },
+    "ST-4": { "survey_tracked": false },
+    "MK-4": { "survey_tracked": false }
+  },
+  "blocks": [
+    { "i": 0, "j": 0, "kind": "park" },
+    { "i": 1, "j": 0, "kind": "lake" },
+    { "i": 2, "j": 0, "kind": "residential" },
+    { "i": 3, "j": 0, "kind": "residential" },
+    { "i": 0, "j": 1, "kind": "school" },
+    { "i": 1, "j": 1, "kind": "commercial" },
+    { "i": 2, "j": 1, "kind": "hospital" },
+    { "i": 3, "j": 1, "kind": "offices" },
+    { "i": 0, "j": 2, "kind": "residential" },
+    { "i": 1, "j": 2, "kind": "commercial" },
+    { "i": 2, "j": 2, "kind": "market" },
+    { "i": 3, "j": 2, "kind": "offices" },
+    { "i": 0, "j": 3, "kind": "residential" },
+    { "i": 1, "j": 3, "kind": "school" },
+    { "i": 2, "j": 3, "kind": "commercial" },
+    { "i": 3, "j": 3, "kind": "park" }
+  ],
+  "context": [
+    { "id": "CTX-SCH-1", "kind": "school", "name": "Govt. Primary School (demo)", "x": -50, "z": -18 },
+    { "id": "CTX-SCH-2", "kind": "school", "name": "Sunrise High School (demo)", "x": -20, "z": 50 },
+    { "id": "CTX-HOS-1", "kind": "hospital", "name": "City General Hospital (demo)", "x": 18, "z": -18 },
+    { "id": "CTX-BUS-1", "kind": "bus_stop", "name": "Bus stop, MG Road West (demo)", "x": -20, "z": -6 },
+    { "id": "CTX-BUS-2", "kind": "bus_stop", "name": "Bus stop, Hospital Avenue (demo)", "x": 5.5, "z": -24 },
+    { "id": "CTX-BUS-3", "kind": "bus_stop", "name": "Bus stop, Station Road (demo)", "x": -18, "z": 41 },
+    { "id": "CTX-PX-1", "kind": "pedestrian_crossing", "name": "School Lane crossing (demo)", "x": -36, "z": -18, "axis": "z" },
+    { "id": "CTX-PX-2", "kind": "pedestrian_crossing", "name": "Hospital Avenue crossing (demo)", "x": 0, "z": -18, "axis": "z" },
+    { "id": "CTX-PX-3", "kind": "pedestrian_crossing", "name": "MG Road crossing (demo)", "x": 18, "z": 0, "axis": "x" },
+    { "id": "CTX-MKT-1", "kind": "market", "name": "Ward Market (demo)", "x": 24, "z": 18 }
+  ],
+  "defects": [
+    { "id": "DEF-0001", "segment": "HA-2", "t": 0.45, "lane": 1.6, "type": "pothole", "confidence": 0.91, "severity": 0.82, "days_ago": 26 },
+    { "id": "DEF-0002", "segment": "HA-2", "t": 0.455, "lane": 1.7, "type": "pothole", "confidence": 0.88, "severity": 0.9, "days_ago": 15 },
+    { "id": "DEF-0003", "segment": "SL-2", "t": 0.75, "lane": -1.5, "type": "alligator_crack", "confidence": 0.84, "severity": 0.7, "days_ago": 9 },
+    { "id": "DEF-0004", "segment": "SL-2", "t": 0.5, "lane": 1.2, "type": "pothole", "confidence": 0.86, "severity": 0.9, "days_ago": 9 },
+    { "id": "DEF-0005", "segment": "SL-2", "t": 0.3, "lane": -1.0, "type": "pothole", "confidence": 0.8, "severity": 0.55, "days_ago": 48 },
+    { "id": "DEF-0006", "segment": "MG-2", "t": 0.333, "lane": -2.0, "type": "longitudinal_crack", "confidence": 0.79, "severity": 0.55, "days_ago": 4 },
+    { "id": "DEF-0007", "segment": "MG-3", "t": 0.5, "lane": 1.0, "type": "transverse_crack", "confidence": 0.83, "severity": 0.6, "days_ago": 12 },
+    { "id": "DEF-0008", "segment": "MK-3", "t": 0.55, "lane": -1.5, "type": "pothole", "confidence": 0.87, "severity": 0.7, "days_ago": 7 },
+    { "id": "DEF-0009", "segment": "MK-3", "t": 0.22, "lane": 1.0, "type": "pothole", "confidence": 0.82, "severity": 0.5, "days_ago": 70 },
+    { "id": "DEF-0010", "segment": "ST-2", "t": 0.55, "lane": 1.5, "type": "alligator_crack", "confidence": 0.86, "severity": 0.75, "days_ago": 3 },
+    { "id": "DEF-0011", "segment": "LV-3", "t": 0.55, "lane": -1.0, "type": "pothole", "confidence": 0.81, "severity": 0.65, "days_ago": 33 },
+    { "id": "DEF-0012", "segment": "HA-3", "t": 0.3, "lane": -1.8, "type": "longitudinal_crack", "confidence": 0.72, "severity": 0.4, "days_ago": 20 },
+    { "id": "DEF-0013", "segment": "SL-3", "t": 0.4, "lane": 1.0, "type": "transverse_crack", "confidence": 0.77, "severity": 0.45, "days_ago": 40 },
+    { "id": "DEF-0014", "segment": "MG-1", "t": 0.5, "lane": 1.0, "type": "pothole", "confidence": 0.9, "severity": 0.75, "days_ago": 2 },
+    { "id": "DEF-0015", "segment": "HA-1", "t": 0.5, "lane": 2.0, "type": "alligator_crack", "confidence": 0.85, "severity": 0.8, "days_ago": 52 },
+    { "id": "DEF-0016", "segment": "MG-4", "t": 0.4, "lane": -1.2, "type": "transverse_crack", "confidence": 0.75, "severity": 0.5, "days_ago": 45 },
+    { "id": "DEF-0017", "segment": "HA-4", "t": 0.3, "lane": 1.4, "type": "pothole", "confidence": 0.8, "severity": 0.6, "days_ago": 10 }
+  ],
+  "repairs": [
+    { "id": "REP-001", "defect": "DEF-0001", "submitted_days_ago": 22, "status": "pending_verification", "crew": "Ward 4 road maintenance crew (demo)" },
+    { "id": "REP-002", "defect": "DEF-0009", "submitted_days_ago": 66, "verified_days_ago": 60, "status": "verified", "crew": "Ward 7 road maintenance crew (demo)" },
+    { "id": "REP-003", "defect": "DEF-0013", "submitted_days_ago": 30, "verified_days_ago": 25, "status": "verified", "crew": "Ward 2 road maintenance crew (demo)" },
+    { "id": "REP-004", "defect": "DEF-0005", "submitted_days_ago": 40, "verified_days_ago": 33, "status": "verified", "crew": "Ward 2 road maintenance crew (demo)" },
+    { "id": "REP-005", "defect": "DEF-0011", "submitted_days_ago": 5, "status": "submitted", "crew": "Ward 5 road maintenance crew (demo)" }
+  ],
+  "extra_inspections": {
+    "HA-2": [6],
+    "SL-2": [],
+    "MK-3": [],
+    "LV-2": [95],
+    "MG-4": [],
+    "ST-3": [18],
+    "SL-1": [64],
+    "SL-3": [25],
+    "HA-4": [],
+    "MK-2": [28],
+    "LV-3": [],
+    "HA-1": []
+  }
+}

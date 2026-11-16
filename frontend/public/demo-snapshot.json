@@ -1,0 +1,2706 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at": "2026-11-16T08:51:09Z",
+  "city_name": "Demo City (fictional layout)",
+  "metres_per_unit": 5.0,
+  "half_extent": 60,
+  "road_half_width": 4,
+  "layout_source": "demo",
+  "offline_snapshot": true
+ },
+ "config": {
+  "weights": {
+   "D": 0.35,
+   "T": 0.2,
+   "V": 0.2,
+   "R": 0.15,
+   "W": 0.1
+  },
+  "formula": "RPS = 0.35D + 0.20T + 0.20V + 0.15R + 0.10W",
+  "bands": [
+   {
+    "name": "critical",
+    "min": 75.0
+   },
+   {
+    "name": "high",
+    "min": 60.0
+   },
+   {
+    "name": "medium",
+    "min": 40.0
+   },
+   {
+    "name": "low",
+    "min": 0.0
+   }
+  ],
+  "vulnerability_radius_m": 150.0,
+  "recurrence_radius_m": 10.0,
+  "recent_inspection_days": 30,
+  "monsoon_min_flags": 2,
+  "damage_type_weight": {
+   "pothole": 1.0,
+   "alligator_crack": 0.85,
+   "transverse_crack": 0.6,
+   "longitudinal_crack": 0.5
+  },
+  "traffic_by_class": {
+   "arterial": 90.0,
+   "collector": 60.0,
+   "local": 30.0
+  },
+  "vulnerability_weight": {
+   "school": 50.0,
+   "hospital": 50.0,
+   "bus_stop": 30.0,
+   "pedestrian_crossing": 30.0,
+   "market": 20.0
+  },
+  "note": "RPS ranks roads for inspection and repair. It is not an accident probability."
+ },
+ "blocks": [
+  {
+   "i": 0,
+   "j": 0,
+   "kind": "park"
+  },
+  {
+   "i": 1,
+   "j": 0,
+   "kind": "lake"
+  },
+  {
+   "i": 2,
+   "j": 0,
+   "kind": "residential"
+  },
+  {
+   "i": 3,
+   "j": 0,
+   "kind": "residential"
+  },
+  {
+   "i": 0,
+   "j": 1,
+   "kind": "school"
+  },
+  {
+   "i": 1,
+   "j": 1,
+   "kind": "commercial"
+  },
+  {
+   "i": 2,
+   "j": 1,
+   "kind": "hospital"
+  },
+  {
+   "i": 3,
+   "j": 1,
+   "kind": "offices"
+  },
+  {
+   "i": 0,
+   "j": 2,
+   "kind": "residential"
+  },
+  {
+   "i": 1,
+   "j": 2,
+   "kind": "commercial"
+  },
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "market"
+  },
+  {
+   "i": 3,
+   "j": 2,
+   "kind": "offices"
+  },
+  {
+   "i": 0,
+   "j": 3,
+   "kind": "residential"
+  },
+  {
+   "i": 1,
+   "j": 3,
+   "kind": "school"
+  },
+  {
+   "i": 2,
+   "j": 3,
+   "kind": "commercial"
+  },
+  {
+   "i": 3,
+   "j": 3,
+   "kind": "park"
+  }
+ ],
+ "roads": [
+  {
+   "code": "LV",
+   "name": "Lake View Road",
+   "road_class": "collector"
+  },
+  {
+   "code": "MG",
+   "name": "MG Road",
+   "road_class": "arterial"
+  },
+  {
+   "code": "ST",
+   "name": "Station Road",
+   "road_class": "collector"
+  },
+  {
+   "code": "SL",
+   "name": "School Lane",
+   "road_class": "collector"
+  },
+  {
+   "code": "HA",
+   "name": "Hospital Avenue",
+   "road_class": "arterial"
+  },
+  {
+   "code": "MK",
+   "name": "Market Street",
+   "road_class": "collector"
+  }
+ ],
+ "segments": [
+  {
+   "id": "LV-1",
+   "road_code": "LV",
+   "road_name": "Lake View Road",
+   "road_class": "collector",
+   "index": 1,
+   "x1": -60.0,
+   "z1": -36.0,
+   "x2": -36.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "never",
+   "survey_tracked": true,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "LV-2",
+   "road_code": "LV",
+   "road_name": "Lake View Road",
+   "road_class": "collector",
+   "index": 2,
+   "x1": -36.0,
+   "z1": -36.0,
+   "x2": 0.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "overdue",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-08-13",
+   "days_since_inspection": 95,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 2,
+   "drainage_complaints": 1,
+   "monsoon_flags": [
+    "waterlogging",
+    "drainage_complaints",
+    "inspection_overdue"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "LV-3",
+   "road_code": "LV",
+   "road_name": "Lake View Road",
+   "road_class": "collector",
+   "index": 3,
+   "x1": 0.0,
+   "z1": -36.0,
+   "x2": 36.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 43.5,
+   "band": "medium",
+   "top_defect_id": "DEF-0011",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "overdue",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-14",
+   "days_since_inspection": 33,
+   "inspection_count": 1,
+   "repair_status": "submitted",
+   "waterlogging_reports": 1,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "waterlogging",
+    "inspection_overdue"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "LV-4",
+   "road_code": "LV",
+   "road_name": "Lake View Road",
+   "road_class": "collector",
+   "index": 4,
+   "x1": 36.0,
+   "z1": -36.0,
+   "x2": 60.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "unknown",
+   "survey_tracked": false,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MG-1",
+   "road_code": "MG",
+   "road_name": "MG Road",
+   "road_class": "arterial",
+   "index": 1,
+   "x1": -60.0,
+   "z1": 0.0,
+   "x2": -36.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": 49.6,
+   "band": "medium",
+   "top_defect_id": "DEF-0014",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-14",
+   "days_since_inspection": 2,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MG-2",
+   "road_code": "MG",
+   "road_name": "MG Road",
+   "road_class": "arterial",
+   "index": 2,
+   "x1": -36.0,
+   "z1": 0.0,
+   "x2": 0.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 34.7,
+   "band": "low",
+   "top_defect_id": "DEF-0006",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-12",
+   "days_since_inspection": 4,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MG-3",
+   "road_code": "MG",
+   "road_name": "MG Road",
+   "road_class": "arterial",
+   "index": 3,
+   "x1": 0.0,
+   "z1": 0.0,
+   "x2": 36.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 45.3,
+   "band": "medium",
+   "top_defect_id": "DEF-0007",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-04",
+   "days_since_inspection": 12,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 1,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "waterlogging"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MG-4",
+   "road_code": "MG",
+   "road_name": "MG Road",
+   "road_class": "arterial",
+   "index": 4,
+   "x1": 36.0,
+   "z1": 0.0,
+   "x2": 60.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": 29.1,
+   "band": "low",
+   "top_defect_id": "DEF-0016",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "overdue",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-02",
+   "days_since_inspection": 45,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "ST-1",
+   "road_code": "ST",
+   "road_name": "Station Road",
+   "road_class": "collector",
+   "index": 1,
+   "x1": -60.0,
+   "z1": 36.0,
+   "x2": -36.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "never",
+   "survey_tracked": true,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "ST-2",
+   "road_code": "ST",
+   "road_name": "Station Road",
+   "road_class": "collector",
+   "index": 2,
+   "x1": -36.0,
+   "z1": 36.0,
+   "x2": 0.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 45.2,
+   "band": "medium",
+   "top_defect_id": "DEF-0010",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-13",
+   "days_since_inspection": 3,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "ST-3",
+   "road_code": "ST",
+   "road_name": "Station Road",
+   "road_class": "collector",
+   "index": 3,
+   "x1": 0.0,
+   "z1": 36.0,
+   "x2": 36.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-29",
+   "days_since_inspection": 18,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "ST-4",
+   "road_code": "ST",
+   "road_name": "Station Road",
+   "road_class": "collector",
+   "index": 4,
+   "x1": 36.0,
+   "z1": 36.0,
+   "x2": 60.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "unknown",
+   "survey_tracked": false,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "SL-1",
+   "road_code": "SL",
+   "road_name": "School Lane",
+   "road_class": "collector",
+   "index": 1,
+   "x1": -36.0,
+   "z1": -60.0,
+   "x2": -36.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "overdue",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-09-13",
+   "days_since_inspection": 64,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 1,
+   "monsoon_flags": [
+    "drainage_complaints",
+    "inspection_overdue"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "SL-2",
+   "road_code": "SL",
+   "road_name": "School Lane",
+   "road_class": "collector",
+   "index": 2,
+   "x1": -36.0,
+   "z1": -36.0,
+   "x2": -36.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 61.8,
+   "band": "high",
+   "top_defect_id": "DEF-0004",
+   "open_defects": 2,
+   "all_defects": 3,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-07",
+   "days_since_inspection": 9,
+   "inspection_count": 2,
+   "repair_status": "verified",
+   "waterlogging_reports": 2,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "repeated_potholes",
+    "waterlogging"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "SL-3",
+   "road_code": "SL",
+   "road_name": "School Lane",
+   "road_class": "collector",
+   "index": 3,
+   "x1": -36.0,
+   "z1": 0.0,
+   "x2": -36.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-22",
+   "days_since_inspection": 25,
+   "inspection_count": 2,
+   "repair_status": "verified",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "SL-4",
+   "road_code": "SL",
+   "road_name": "School Lane",
+   "road_class": "collector",
+   "index": 4,
+   "x1": -36.0,
+   "z1": 36.0,
+   "x2": -36.0,
+   "z2": 60.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "never",
+   "survey_tracked": true,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "HA-1",
+   "road_code": "HA",
+   "road_name": "Hospital Avenue",
+   "road_class": "arterial",
+   "index": 1,
+   "x1": 0.0,
+   "z1": -60.0,
+   "x2": 0.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": 42.8,
+   "band": "medium",
+   "top_defect_id": "DEF-0015",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "overdue",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-09-25",
+   "days_since_inspection": 52,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "HA-2",
+   "road_code": "HA",
+   "road_name": "Hospital Avenue",
+   "road_class": "arterial",
+   "index": 2,
+   "x1": 0.0,
+   "z1": -36.0,
+   "x2": 0.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 84.2,
+   "band": "critical",
+   "top_defect_id": "DEF-0002",
+   "open_defects": 2,
+   "all_defects": 2,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-10",
+   "days_since_inspection": 6,
+   "inspection_count": 3,
+   "repair_status": "reinspection_recommended",
+   "waterlogging_reports": 3,
+   "drainage_complaints": 1,
+   "monsoon_flags": [
+    "repeated_potholes",
+    "waterlogging",
+    "drainage_complaints",
+    "recurring_damage"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": true,
+   "source": "demo"
+  },
+  {
+   "id": "HA-3",
+   "road_code": "HA",
+   "road_name": "Hospital Avenue",
+   "road_class": "arterial",
+   "index": 3,
+   "x1": 0.0,
+   "z1": 0.0,
+   "x2": 0.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 28.7,
+   "band": "low",
+   "top_defect_id": "DEF-0012",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-27",
+   "days_since_inspection": 20,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "HA-4",
+   "road_code": "HA",
+   "road_name": "Hospital Avenue",
+   "road_class": "arterial",
+   "index": 4,
+   "x1": 0.0,
+   "z1": 36.0,
+   "x2": 0.0,
+   "z2": 60.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": 45.1,
+   "band": "medium",
+   "top_defect_id": "DEF-0017",
+   "open_defects": 1,
+   "all_defects": 1,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-06",
+   "days_since_inspection": 10,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MK-1",
+   "road_code": "MK",
+   "road_name": "Market Street",
+   "road_class": "collector",
+   "index": 1,
+   "x1": 36.0,
+   "z1": -60.0,
+   "x2": 36.0,
+   "z2": -36.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "never",
+   "survey_tracked": true,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [
+    "inspection_overdue"
+   ],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MK-2",
+   "road_code": "MK",
+   "road_name": "Market Street",
+   "road_class": "collector",
+   "index": 2,
+   "x1": 36.0,
+   "z1": -36.0,
+   "x2": 36.0,
+   "z2": 0.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-10-19",
+   "days_since_inspection": 28,
+   "inspection_count": 1,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MK-3",
+   "road_code": "MK",
+   "road_name": "Market Street",
+   "road_class": "collector",
+   "index": 3,
+   "x1": 36.0,
+   "z1": 0.0,
+   "x2": 36.0,
+   "z2": 36.0,
+   "width": 8.0,
+   "length_m": 180.0,
+   "rps": 47.1,
+   "band": "medium",
+   "top_defect_id": "DEF-0008",
+   "open_defects": 1,
+   "all_defects": 2,
+   "coverage": "recent",
+   "survey_tracked": true,
+   "last_inspected_on": "2026-11-09",
+   "days_since_inspection": 7,
+   "inspection_count": 2,
+   "repair_status": "verified",
+   "waterlogging_reports": 2,
+   "drainage_complaints": 2,
+   "monsoon_flags": [
+    "repeated_potholes",
+    "waterlogging",
+    "drainage_complaints"
+   ],
+   "monsoon_watch": true,
+   "possible_recurrence": false,
+   "source": "demo"
+  },
+  {
+   "id": "MK-4",
+   "road_code": "MK",
+   "road_name": "Market Street",
+   "road_class": "collector",
+   "index": 4,
+   "x1": 36.0,
+   "z1": 36.0,
+   "x2": 36.0,
+   "z2": 60.0,
+   "width": 8.0,
+   "length_m": 120.0,
+   "rps": null,
+   "band": "none",
+   "top_defect_id": null,
+   "open_defects": 0,
+   "all_defects": 0,
+   "coverage": "unknown",
+   "survey_tracked": false,
+   "last_inspected_on": null,
+   "days_since_inspection": null,
+   "inspection_count": 0,
+   "repair_status": "none",
+   "waterlogging_reports": 0,
+   "drainage_complaints": 0,
+   "monsoon_flags": [],
+   "monsoon_watch": false,
+   "possible_recurrence": false,
+   "source": "demo"
+  }
+ ],
+ "context": [
+  {
+   "id": "CTX-SCH-1",
+   "kind": "school",
+   "kind_label": "school",
+   "name": "Govt. Primary School (demo)",
+   "x": -50.0,
+   "z": -18.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-SCH-2",
+   "kind": "school",
+   "kind_label": "school",
+   "name": "Sunrise High School (demo)",
+   "x": -20.0,
+   "z": 50.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-HOS-1",
+   "kind": "hospital",
+   "kind_label": "hospital",
+   "name": "City General Hospital (demo)",
+   "x": 18.0,
+   "z": -18.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-BUS-1",
+   "kind": "bus_stop",
+   "kind_label": "bus stop",
+   "name": "Bus stop, MG Road West (demo)",
+   "x": -20.0,
+   "z": -6.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-BUS-2",
+   "kind": "bus_stop",
+   "kind_label": "bus stop",
+   "name": "Bus stop, Hospital Avenue (demo)",
+   "x": 5.5,
+   "z": -24.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-BUS-3",
+   "kind": "bus_stop",
+   "kind_label": "bus stop",
+   "name": "Bus stop, Station Road (demo)",
+   "x": -18.0,
+   "z": 41.0,
+   "axis": null,
+   "source": "demo"
+  },
+  {
+   "id": "CTX-PX-1",
+   "kind": "pedestrian_crossing",
+   "kind_label": "pedestrian crossing",
+   "name": "School Lane crossing (demo)",
+   "x": -36.0,
+   "z": -18.0,
+   "axis": "z",
+   "source": "demo"
+  },
+  {
+   "id": "CTX-PX-2",
+   "kind": "pedestrian_crossing",
+   "kind_label": "pedestrian crossing",
+   "name": "Hospital Avenue crossing (demo)",
+   "x": 0.0,
+   "z": -18.0,
+   "axis": "z",
+   "source": "demo"
+  },
+  {
+   "id": "CTX-PX-3",
+   "kind": "pedestrian_crossing",
+   "kind_label": "pedestrian crossing",
+   "name": "MG Road crossing (demo)",
+   "x": 18.0,
+   "z": 0.0,
+   "axis": "x",
+   "source": "demo"
+  },
+  {
+   "id": "CTX-MKT-1",
+   "kind": "market",
+   "kind_label": "market",
+   "name": "Ward Market (demo)",
+   "x": 24.0,
+   "z": 18.0,
+   "axis": null,
+   "source": "demo"
+  }
+ ],
+ "defects": [
+  {
+   "id": "DEF-0009",
+   "segment_id": "MK-3",
+   "road_name": "Market Street",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.82,
+   "visual_severity": 0.5,
+   "severity_label": "moderate",
+   "x": 35.0,
+   "z": 7.92,
+   "t": 0.22,
+   "lane": 1.0,
+   "detected_on": "2026-09-07",
+   "inspection_id": "INS-MK-3-070",
+   "bbox": [
+    0.4892,
+    0.3453,
+    0.2396,
+    0.2352
+   ],
+   "image_url": "/static/demo/DEF-0009.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "repaired_verified",
+   "rps": 41.8,
+   "band": "medium",
+   "factors": {
+    "D": 50.0,
+    "T": 60.0,
+    "V": 21.3,
+    "R": 0.0,
+    "W": 80.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.50 \u00d7 pothole weight 1.00",
+    "T": "collector road class",
+    "V": "pedestrian crossing 94 m (11.2) + market 75 m (10.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "2 waterlogging \u00d7 25 + 2 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d750.0 + 0.20\u00d760.0 + 0.20\u00d721.3 + 0.15\u00d70.0 + 0.10\u00d780.0 = 41.8",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 94.0,
+     "points": 11.2
+    },
+    {
+     "id": "CTX-MKT-1",
+     "kind": "market",
+     "name": "Ward Market (demo)",
+     "distance_m": 75.0,
+     "points": 10.1
+    }
+   ],
+   "reasons": [
+    "Pothole with moderate visual severity (D 50).",
+    "Market Street is a collector road (T 60).",
+    "Within 150 m of MG Road crossing (demo) (94 m), Ward Market (demo) (75 m) (V 21).",
+    "2 waterlogging and 2 drainage reports on this section (W 80).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0015",
+   "segment_id": "HA-1",
+   "road_name": "Hospital Avenue",
+   "type": "alligator_crack",
+   "type_label": "Alligator crack",
+   "confidence": 0.85,
+   "visual_severity": 0.8,
+   "severity_label": "severe",
+   "x": -2.0,
+   "z": -48.0,
+   "t": 0.5,
+   "lane": 2.0,
+   "detected_on": "2026-09-25",
+   "inspection_id": "INS-HA-1-052",
+   "bbox": [
+    0.3805,
+    0.2051,
+    0.453,
+    0.4765
+   ],
+   "image_url": "/static/demo/DEF-0015.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 42.8,
+   "band": "medium",
+   "factors": {
+    "D": 68.0,
+    "T": 90.0,
+    "V": 4.9,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.80 \u00d7 alligator crack weight 0.85",
+    "T": "arterial road class",
+    "V": "bus stop 126 m (4.9)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d768.0 + 0.20\u00d790.0 + 0.20\u00d74.9 + 0.15\u00d70.0 + 0.10\u00d70.0 = 42.8",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-BUS-2",
+     "kind": "bus_stop",
+     "name": "Bus stop, Hospital Avenue (demo)",
+     "distance_m": 126.0,
+     "points": 4.9
+    }
+   ],
+   "reasons": [
+    "Alligator crack with severe visual severity (D 68).",
+    "Hospital Avenue is an arterial road (T 90).",
+    "Within 150 m of Bus stop, Hospital Avenue (demo) (126 m) (V 5).",
+    "Suggested action: Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0005",
+   "segment_id": "SL-2",
+   "road_name": "School Lane",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.8,
+   "visual_severity": 0.55,
+   "severity_label": "moderate",
+   "x": -35.0,
+   "z": -25.2,
+   "t": 0.3,
+   "lane": -1.0,
+   "detected_on": "2026-09-29",
+   "inspection_id": "INS-SL-2-048",
+   "bbox": [
+    0.2926,
+    0.3427,
+    0.241,
+    0.2537
+   ],
+   "image_url": "/static/demo/DEF-0005.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "repaired_verified",
+   "rps": 46.4,
+   "band": "medium",
+   "factors": {
+    "D": 55.0,
+    "T": 60.0,
+    "V": 50.6,
+    "R": 0.0,
+    "W": 50.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.55 \u00d7 pothole weight 1.00",
+    "T": "collector road class",
+    "V": "pedestrian crossing 36 m (22.7) + school 83 m (22.3) + bus stop 122 m (5.6)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "2 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d755.0 + 0.20\u00d760.0 + 0.20\u00d750.6 + 0.15\u00d70.0 + 0.10\u00d750.0 = 46.4",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-1",
+     "kind": "pedestrian_crossing",
+     "name": "School Lane crossing (demo)",
+     "distance_m": 36.0,
+     "points": 22.7
+    },
+    {
+     "id": "CTX-SCH-1",
+     "kind": "school",
+     "name": "Govt. Primary School (demo)",
+     "distance_m": 83.0,
+     "points": 22.3
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 122.0,
+     "points": 5.6
+    }
+   ],
+   "reasons": [
+    "Pothole with moderate visual severity (D 55).",
+    "School Lane is a collector road (T 60).",
+    "Within 150 m of School Lane crossing (demo) (36 m), Govt. Primary School (demo) (83 m), Bus stop, MG Road West (demo) (122 m) (V 51).",
+    "2 waterlogging and 0 drainage reports on this section (W 50).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0016",
+   "segment_id": "MG-4",
+   "road_name": "MG Road",
+   "type": "transverse_crack",
+   "type_label": "Transverse crack",
+   "confidence": 0.75,
+   "visual_severity": 0.5,
+   "severity_label": "moderate",
+   "x": 45.6,
+   "z": -1.2,
+   "t": 0.4,
+   "lane": -1.2,
+   "detected_on": "2026-10-02",
+   "inspection_id": "INS-MG-4-045",
+   "bbox": [
+    0.2674,
+    0.4748,
+    0.4781,
+    0.1887
+   ],
+   "image_url": "/static/demo/DEF-0016.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 29.1,
+   "band": "low",
+   "factors": {
+    "D": 30.0,
+    "T": 90.0,
+    "V": 3.1,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.50 \u00d7 transverse crack weight 0.60",
+    "T": "arterial road class",
+    "V": "pedestrian crossing 138 m (2.4) + market 144 m (0.7)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d730.0 + 0.20\u00d790.0 + 0.20\u00d73.1 + 0.15\u00d70.0 + 0.10\u00d70.0 = 29.1",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 138.0,
+     "points": 2.4
+    },
+    {
+     "id": "CTX-MKT-1",
+     "kind": "market",
+     "name": "Ward Market (demo)",
+     "distance_m": 144.0,
+     "points": 0.7
+    }
+   ],
+   "reasons": [
+    "Transverse crack with moderate visual severity (D 30).",
+    "MG Road is an arterial road (T 90).",
+    "Within 150 m of MG Road crossing (demo) (138 m), Ward Market (demo) (144 m) (V 3).",
+    "Suggested action: Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0013",
+   "segment_id": "SL-3",
+   "road_name": "School Lane",
+   "type": "transverse_crack",
+   "type_label": "Transverse crack",
+   "confidence": 0.77,
+   "visual_severity": 0.45,
+   "severity_label": "minor",
+   "x": -37.0,
+   "z": 14.4,
+   "t": 0.4,
+   "lane": 1.0,
+   "detected_on": "2026-10-07",
+   "inspection_id": "INS-SL-3-040",
+   "bbox": [
+    0.2814,
+    0.3738,
+    0.4609,
+    0.1155
+   ],
+   "image_url": "/static/demo/DEF-0013.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "repaired_verified",
+   "rps": 22.1,
+   "band": "low",
+   "factors": {
+    "D": 27.0,
+    "T": 60.0,
+    "V": 3.4,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.45 \u00d7 transverse crack weight 0.60",
+    "T": "collector road class",
+    "V": "bus stop 133 m (3.4)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d727.0 + 0.20\u00d760.0 + 0.20\u00d73.4 + 0.15\u00d70.0 + 0.10\u00d70.0 = 22.1",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 133.0,
+     "points": 3.4
+    }
+   ],
+   "reasons": [
+    "Transverse crack with minor visual severity (D 27).",
+    "School Lane is a collector road (T 60).",
+    "Within 150 m of Bus stop, MG Road West (demo) (133 m) (V 3).",
+    "Suggested action: Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0011",
+   "segment_id": "LV-3",
+   "road_name": "Lake View Road",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.81,
+   "visual_severity": 0.65,
+   "severity_label": "moderate",
+   "x": 19.8,
+   "z": -37.0,
+   "t": 0.55,
+   "lane": -1.0,
+   "detected_on": "2026-10-14",
+   "inspection_id": "INS-LV-3-033",
+   "bbox": [
+    0.4026,
+    0.2806,
+    0.267,
+    0.2567
+   ],
+   "image_url": "/static/demo/DEF-0011.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "repair_submitted",
+   "rps": 43.5,
+   "band": "medium",
+   "factors": {
+    "D": 65.0,
+    "T": 60.0,
+    "V": 31.5,
+    "R": 0.0,
+    "W": 25.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.65 \u00d7 pothole weight 1.00",
+    "T": "collector road class",
+    "V": "hospital 95 m (18.2) + bus stop 97 m (10.7) + pedestrian crossing 137 m (2.6)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "1 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d765.0 + 0.20\u00d760.0 + 0.20\u00d731.5 + 0.15\u00d70.0 + 0.10\u00d725.0 = 43.5",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-HOS-1",
+     "kind": "hospital",
+     "name": "City General Hospital (demo)",
+     "distance_m": 95.0,
+     "points": 18.2
+    },
+    {
+     "id": "CTX-BUS-2",
+     "kind": "bus_stop",
+     "name": "Bus stop, Hospital Avenue (demo)",
+     "distance_m": 97.0,
+     "points": 10.7
+    },
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 137.0,
+     "points": 2.6
+    }
+   ],
+   "reasons": [
+    "Pothole with moderate visual severity (D 65).",
+    "Lake View Road is a collector road (T 60).",
+    "Within 150 m of City General Hospital (demo) (95 m), Bus stop, Hospital Avenue (demo) (97 m), Hospital Avenue crossing (demo) (137 m) (V 32).",
+    "1 waterlogging and 0 drainage reports on this section (W 25).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0001",
+   "segment_id": "HA-2",
+   "road_name": "Hospital Avenue",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.91,
+   "visual_severity": 0.82,
+   "severity_label": "severe",
+   "x": -1.6,
+   "z": -19.8,
+   "t": 0.45,
+   "lane": 1.6,
+   "detected_on": "2026-10-21",
+   "inspection_id": "INS-HA-2-026",
+   "bbox": [
+    0.2816,
+    0.3341,
+    0.294,
+    0.3443
+   ],
+   "image_url": "/static/demo/DEF-0001.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "repair_submitted",
+   "rps": 70.8,
+   "band": "high",
+   "factors": {
+    "D": 82.0,
+    "T": 90.0,
+    "V": 75.7,
+    "R": 0.0,
+    "W": 90.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.82 \u00d7 pothole weight 1.00",
+    "T": "arterial road class",
+    "V": "pedestrian crossing 12 m (27.6) + bus stop 41 m (21.8) + hospital 98 m (17.2) + bus stop 115 m (7.0) + pedestrian crossing 139 m (2.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "3 waterlogging \u00d7 25 + 1 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d782.0 + 0.20\u00d790.0 + 0.20\u00d775.7 + 0.15\u00d70.0 + 0.10\u00d790.0 = 70.8",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 12.0,
+     "points": 27.6
+    },
+    {
+     "id": "CTX-BUS-2",
+     "kind": "bus_stop",
+     "name": "Bus stop, Hospital Avenue (demo)",
+     "distance_m": 41.0,
+     "points": 21.8
+    },
+    {
+     "id": "CTX-HOS-1",
+     "kind": "hospital",
+     "name": "City General Hospital (demo)",
+     "distance_m": 98.0,
+     "points": 17.2
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 115.0,
+     "points": 7.0
+    },
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 139.0,
+     "points": 2.1
+    }
+   ],
+   "reasons": [
+    "Pothole with severe visual severity (D 82).",
+    "Hospital Avenue is an arterial road (T 90).",
+    "Within 150 m of Hospital Avenue crossing (demo) (12 m), Bus stop, Hospital Avenue (demo) (41 m), City General Hospital (demo) (98 m) (V 76).",
+    "3 waterlogging and 1 drainage reports on this section (W 90).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 week. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 week. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0012",
+   "segment_id": "HA-3",
+   "road_name": "Hospital Avenue",
+   "type": "longitudinal_crack",
+   "type_label": "Longitudinal crack",
+   "confidence": 0.72,
+   "visual_severity": 0.4,
+   "severity_label": "minor",
+   "x": 1.8,
+   "z": 10.8,
+   "t": 0.3,
+   "lane": -1.8,
+   "detected_on": "2026-10-27",
+   "inspection_id": "INS-HA-3-020",
+   "bbox": [
+    0.5123,
+    0.2467,
+    0.1198,
+    0.59
+   ],
+   "image_url": "/static/demo/DEF-0012.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 28.7,
+   "band": "low",
+   "factors": {
+    "D": 20.0,
+    "T": 90.0,
+    "V": 18.5,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.40 \u00d7 longitudinal crack weight 0.50",
+    "T": "arterial road class",
+    "V": "pedestrian crossing 97 m (10.5) + market 117 m (4.4) + bus stop 138 m (2.5) + pedestrian crossing 144 m (1.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d720.0 + 0.20\u00d790.0 + 0.20\u00d718.5 + 0.15\u00d70.0 + 0.10\u00d70.0 = 28.7",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 97.0,
+     "points": 10.5
+    },
+    {
+     "id": "CTX-MKT-1",
+     "kind": "market",
+     "name": "Ward Market (demo)",
+     "distance_m": 117.0,
+     "points": 4.4
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 138.0,
+     "points": 2.5
+    },
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 144.0,
+     "points": 1.1
+    }
+   ],
+   "reasons": [
+    "Longitudinal crack with minor visual severity (D 20).",
+    "Hospital Avenue is an arterial road (T 90).",
+    "Within 150 m of MG Road crossing (demo) (97 m), Ward Market (demo) (117 m), Bus stop, MG Road West (demo) (138 m) (V 18).",
+    "Suggested action: Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0002",
+   "segment_id": "HA-2",
+   "road_name": "Hospital Avenue",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.88,
+   "visual_severity": 0.9,
+   "severity_label": "severe",
+   "x": -1.7,
+   "z": -19.62,
+   "t": 0.455,
+   "lane": 1.7,
+   "detected_on": "2026-11-01",
+   "inspection_id": "INS-HA-2-015",
+   "bbox": [
+    0.3214,
+    0.4156,
+    0.3064,
+    0.3212
+   ],
+   "image_url": "/static/demo/DEF-0002.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 84.2,
+   "band": "critical",
+   "factors": {
+    "D": 90.0,
+    "T": 90.0,
+    "V": 75.8,
+    "R": 70.0,
+    "W": 90.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.90 \u00d7 pothole weight 1.00",
+    "T": "arterial road class",
+    "V": "pedestrian crossing 12 m (27.7) + bus stop 42 m (21.6) + hospital 99 m (17.1) + bus stop 114 m (7.2) + pedestrian crossing 139 m (2.2)",
+    "R": "1 earlier record(s) within 10 m, repair submitted before re-detection (+20)",
+    "W": "3 waterlogging \u00d7 25 + 1 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d790.0 + 0.20\u00d790.0 + 0.20\u00d775.8 + 0.15\u00d770.0 + 0.10\u00d790.0 = 84.2",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 12.0,
+     "points": 27.7
+    },
+    {
+     "id": "CTX-BUS-2",
+     "kind": "bus_stop",
+     "name": "Bus stop, Hospital Avenue (demo)",
+     "distance_m": 42.0,
+     "points": 21.6
+    },
+    {
+     "id": "CTX-HOS-1",
+     "kind": "hospital",
+     "name": "City General Hospital (demo)",
+     "distance_m": 99.0,
+     "points": 17.1
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 114.0,
+     "points": 7.2
+    },
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 139.0,
+     "points": 2.2
+    }
+   ],
+   "reasons": [
+    "Pothole with severe visual severity (D 90).",
+    "Hospital Avenue is an arterial road (T 90).",
+    "Within 150 m of Hospital Avenue crossing (demo) (12 m), Bus stop, Hospital Avenue (demo) (42 m), City General Hospital (demo) (99 m) (V 76).",
+    "Damage was recorded at this spot 1 time before, including after a repair was submitted. Re-inspection recommended (R 70).",
+    "3 waterlogging and 1 drainage reports on this section (W 90).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Act within 48 hours and place a warning sign until it is fixed. Damage came back after an earlier repair: check drainage and the base layer before repairing again. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [
+    "DEF-0001"
+   ],
+   "possible_recurrence": true,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Act within 48 hours and place a warning sign until it is fixed. Damage came back after an earlier repair: check drainage and the base layer before repairing again. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": [
+    {
+     "id": "DEF-0001",
+     "type": "pothole",
+     "detected_on": "2026-10-21",
+     "status": "repair_submitted",
+     "source": "demo"
+    }
+   ]
+  },
+  {
+   "id": "DEF-0007",
+   "segment_id": "MG-3",
+   "road_name": "MG Road",
+   "type": "transverse_crack",
+   "type_label": "Transverse crack",
+   "confidence": 0.83,
+   "visual_severity": 0.6,
+   "severity_label": "moderate",
+   "x": 18.0,
+   "z": 1.0,
+   "t": 0.5,
+   "lane": 1.0,
+   "detected_on": "2026-11-04",
+   "inspection_id": "INS-MG-3-012",
+   "bbox": [
+    0.2982,
+    0.3787,
+    0.5125,
+    0.2356
+   ],
+   "image_url": "/static/demo/DEF-0007.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 45.3,
+   "band": "medium",
+   "factors": {
+    "D": 36.0,
+    "T": 90.0,
+    "V": 61.1,
+    "R": 0.0,
+    "W": 25.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.60 \u00d7 transverse crack weight 0.60",
+    "T": "arterial road class",
+    "V": "pedestrian crossing 5 m (29.0) + hospital 95 m (18.3) + market 90 m (8.0) + pedestrian crossing 131 m (3.8) + bus stop 140 m (2.0)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "1 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d736.0 + 0.20\u00d790.0 + 0.20\u00d761.1 + 0.15\u00d70.0 + 0.10\u00d725.0 = 45.3",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 5.0,
+     "points": 29.0
+    },
+    {
+     "id": "CTX-HOS-1",
+     "kind": "hospital",
+     "name": "City General Hospital (demo)",
+     "distance_m": 95.0,
+     "points": 18.3
+    },
+    {
+     "id": "CTX-MKT-1",
+     "kind": "market",
+     "name": "Ward Market (demo)",
+     "distance_m": 90.0,
+     "points": 8.0
+    },
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 131.0,
+     "points": 3.8
+    },
+    {
+     "id": "CTX-BUS-2",
+     "kind": "bus_stop",
+     "name": "Bus stop, Hospital Avenue (demo)",
+     "distance_m": 140.0,
+     "points": 2.0
+    }
+   ],
+   "reasons": [
+    "Transverse crack with moderate visual severity (D 36).",
+    "MG Road is an arterial road (T 90).",
+    "Within 150 m of MG Road crossing (demo) (5 m), City General Hospital (demo) (95 m), Ward Market (demo) (90 m) (V 61).",
+    "1 waterlogging and 0 drainage reports on this section (W 25).",
+    "Suggested action: Clean and seal the crack so water cannot get under the road surface. Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Clean and seal the crack so water cannot get under the road surface. Schedule the repair within 1 month.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0017",
+   "segment_id": "HA-4",
+   "road_name": "Hospital Avenue",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.8,
+   "visual_severity": 0.6,
+   "severity_label": "moderate",
+   "x": -1.4,
+   "z": 43.2,
+   "t": 0.3,
+   "lane": 1.4,
+   "detected_on": "2026-11-06",
+   "inspection_id": "INS-HA-4-010",
+   "bbox": [
+    0.3426,
+    0.366,
+    0.2564,
+    0.2711
+   ],
+   "image_url": "/static/demo/DEF-0017.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 45.1,
+   "band": "medium",
+   "factors": {
+    "D": 60.0,
+    "T": 90.0,
+    "V": 30.3,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.60 \u00d7 pothole weight 1.00",
+    "T": "arterial road class",
+    "V": "school 99 m (17.0) + bus stop 84 m (13.3)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d760.0 + 0.20\u00d790.0 + 0.20\u00d730.3 + 0.15\u00d70.0 + 0.10\u00d70.0 = 45.1",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-SCH-2",
+     "kind": "school",
+     "name": "Sunrise High School (demo)",
+     "distance_m": 99.0,
+     "points": 17.0
+    },
+    {
+     "id": "CTX-BUS-3",
+     "kind": "bus_stop",
+     "name": "Bus stop, Station Road (demo)",
+     "distance_m": 84.0,
+     "points": 13.3
+    }
+   ],
+   "reasons": [
+    "Pothole with moderate visual severity (D 60).",
+    "Hospital Avenue is an arterial road (T 90).",
+    "Within 150 m of Sunrise High School (demo) (99 m), Bus stop, Station Road (demo) (84 m) (V 30).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0003",
+   "segment_id": "SL-2",
+   "road_name": "School Lane",
+   "type": "alligator_crack",
+   "type_label": "Alligator crack",
+   "confidence": 0.84,
+   "visual_severity": 0.7,
+   "severity_label": "moderate",
+   "x": -34.5,
+   "z": -9.0,
+   "t": 0.75,
+   "lane": -1.5,
+   "detected_on": "2026-11-07",
+   "inspection_id": "INS-SL-2-009",
+   "bbox": [
+    0.2599,
+    0.2346,
+    0.4271,
+    0.4463
+   ],
+   "image_url": "/static/demo/DEF-0003.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 49.1,
+   "band": "medium",
+   "factors": {
+    "D": 59.5,
+    "T": 60.0,
+    "V": 56.2,
+    "R": 0.0,
+    "W": 50.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.70 \u00d7 alligator crack weight 0.85",
+    "T": "collector road class",
+    "V": "pedestrian crossing 46 m (20.9) + school 90 m (20.1) + bus stop 74 m (15.2)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "2 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d759.5 + 0.20\u00d760.0 + 0.20\u00d756.2 + 0.15\u00d70.0 + 0.10\u00d750.0 = 49.1",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-1",
+     "kind": "pedestrian_crossing",
+     "name": "School Lane crossing (demo)",
+     "distance_m": 46.0,
+     "points": 20.9
+    },
+    {
+     "id": "CTX-SCH-1",
+     "kind": "school",
+     "name": "Govt. Primary School (demo)",
+     "distance_m": 90.0,
+     "points": 20.1
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 74.0,
+     "points": 15.2
+    }
+   ],
+   "reasons": [
+    "Alligator crack with moderate visual severity (D 60).",
+    "School Lane is a collector road (T 60).",
+    "Within 150 m of School Lane crossing (demo) (46 m), Govt. Primary School (demo) (90 m), Bus stop, MG Road West (demo) (74 m) (V 56).",
+    "2 waterlogging and 0 drainage reports on this section (W 50).",
+    "Suggested action: Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": [
+    {
+     "id": "DEF-0005",
+     "type": "pothole",
+     "detected_on": "2026-09-29",
+     "status": "repaired_verified",
+     "source": "demo"
+    },
+    {
+     "id": "DEF-0004",
+     "type": "pothole",
+     "detected_on": "2026-11-07",
+     "status": "open",
+     "source": "demo"
+    }
+   ]
+  },
+  {
+   "id": "DEF-0004",
+   "segment_id": "SL-2",
+   "road_name": "School Lane",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.86,
+   "visual_severity": 0.9,
+   "severity_label": "severe",
+   "x": -37.2,
+   "z": -18.0,
+   "t": 0.5,
+   "lane": 1.2,
+   "detected_on": "2026-11-07",
+   "inspection_id": "INS-SL-2-009",
+   "bbox": [
+    0.4251,
+    0.2817,
+    0.32,
+    0.3314
+   ],
+   "image_url": "/static/demo/DEF-0004.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 61.8,
+   "band": "high",
+   "factors": {
+    "D": 90.0,
+    "T": 60.0,
+    "V": 66.5,
+    "R": 0.0,
+    "W": 50.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.90 \u00d7 pothole weight 1.00",
+    "T": "collector road class",
+    "V": "pedestrian crossing 6 m (28.8) + school 64 m (28.7) + bus stop 105 m (9.0)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "2 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d790.0 + 0.20\u00d760.0 + 0.20\u00d766.5 + 0.15\u00d70.0 + 0.10\u00d750.0 = 61.8",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-PX-1",
+     "kind": "pedestrian_crossing",
+     "name": "School Lane crossing (demo)",
+     "distance_m": 6.0,
+     "points": 28.8
+    },
+    {
+     "id": "CTX-SCH-1",
+     "kind": "school",
+     "name": "Govt. Primary School (demo)",
+     "distance_m": 64.0,
+     "points": 28.7
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 105.0,
+     "points": 9.0
+    }
+   ],
+   "reasons": [
+    "Pothole with severe visual severity (D 90).",
+    "School Lane is a collector road (T 60).",
+    "Within 150 m of School Lane crossing (demo) (6 m), Govt. Primary School (demo) (64 m), Bus stop, MG Road West (demo) (105 m) (V 66).",
+    "2 waterlogging and 0 drainage reports on this section (W 50).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 week. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 week. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": [
+    {
+     "id": "DEF-0005",
+     "type": "pothole",
+     "detected_on": "2026-09-29",
+     "status": "repaired_verified",
+     "source": "demo"
+    },
+    {
+     "id": "DEF-0003",
+     "type": "alligator_crack",
+     "detected_on": "2026-11-07",
+     "status": "open",
+     "source": "demo"
+    }
+   ]
+  },
+  {
+   "id": "DEF-0008",
+   "segment_id": "MK-3",
+   "road_name": "Market Street",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.87,
+   "visual_severity": 0.7,
+   "severity_label": "moderate",
+   "x": 37.5,
+   "z": 19.8,
+   "t": 0.55,
+   "lane": -1.5,
+   "detected_on": "2026-11-09",
+   "inspection_id": "INS-MK-3-007",
+   "bbox": [
+    0.4181,
+    0.357,
+    0.289,
+    0.3004
+   ],
+   "image_url": "/static/demo/DEF-0008.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 47.1,
+   "band": "medium",
+   "factors": {
+    "D": 70.0,
+    "T": 60.0,
+    "V": 13.1,
+    "R": 0.0,
+    "W": 80.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.70 \u00d7 pothole weight 1.00",
+    "T": "collector road class",
+    "V": "market 68 m (10.9) + pedestrian crossing 139 m (2.2)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "2 waterlogging \u00d7 25 + 2 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d770.0 + 0.20\u00d760.0 + 0.20\u00d713.1 + 0.15\u00d70.0 + 0.10\u00d780.0 = 47.1",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-MKT-1",
+     "kind": "market",
+     "name": "Ward Market (demo)",
+     "distance_m": 68.0,
+     "points": 10.9
+    },
+    {
+     "id": "CTX-PX-3",
+     "kind": "pedestrian_crossing",
+     "name": "MG Road crossing (demo)",
+     "distance_m": 139.0,
+     "points": 2.2
+    }
+   ],
+   "reasons": [
+    "Pothole with moderate visual severity (D 70).",
+    "Market Street is a collector road (T 60).",
+    "Within 150 m of Ward Market (demo) (68 m), MG Road crossing (demo) (139 m) (V 13).",
+    "2 waterlogging and 2 drainage reports on this section (W 80).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month. Waterlogging is recorded here: check the drainage at this spot.",
+   "previous_records": [
+    {
+     "id": "DEF-0009",
+     "type": "pothole",
+     "detected_on": "2026-09-07",
+     "status": "repaired_verified",
+     "source": "demo"
+    }
+   ]
+  },
+  {
+   "id": "DEF-0006",
+   "segment_id": "MG-2",
+   "road_name": "MG Road",
+   "type": "longitudinal_crack",
+   "type_label": "Longitudinal crack",
+   "confidence": 0.79,
+   "visual_severity": 0.55,
+   "severity_label": "moderate",
+   "x": -24.01,
+   "z": -2.0,
+   "t": 0.333,
+   "lane": -2.0,
+   "detected_on": "2026-11-12",
+   "inspection_id": "INS-MG-2-004",
+   "bbox": [
+    0.5093,
+    0.1193,
+    0.0916,
+    0.68
+   ],
+   "image_url": "/static/demo/DEF-0006.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 34.7,
+   "band": "low",
+   "factors": {
+    "D": 27.5,
+    "T": 90.0,
+    "V": 35.4,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.55 \u00d7 longitudinal crack weight 0.50",
+    "T": "arterial road class",
+    "V": "bus stop 28 m (24.3) + pedestrian crossing 100 m (10.0) + pedestrian crossing 144 m (1.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d727.5 + 0.20\u00d790.0 + 0.20\u00d735.4 + 0.15\u00d70.0 + 0.10\u00d70.0 = 34.7",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 28.0,
+     "points": 24.3
+    },
+    {
+     "id": "CTX-PX-1",
+     "kind": "pedestrian_crossing",
+     "name": "School Lane crossing (demo)",
+     "distance_m": 100.0,
+     "points": 10.0
+    },
+    {
+     "id": "CTX-PX-2",
+     "kind": "pedestrian_crossing",
+     "name": "Hospital Avenue crossing (demo)",
+     "distance_m": 144.0,
+     "points": 1.1
+    }
+   ],
+   "reasons": [
+    "Longitudinal crack with moderate visual severity (D 28).",
+    "MG Road is an arterial road (T 90).",
+    "Within 150 m of Bus stop, MG Road West (demo) (28 m), School Lane crossing (demo) (100 m), Hospital Avenue crossing (demo) (144 m) (V 35).",
+    "Suggested action: Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Clean and seal the crack so water cannot get under the road surface. Add it to the next routine maintenance round.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0010",
+   "segment_id": "ST-2",
+   "road_name": "Station Road",
+   "type": "alligator_crack",
+   "type_label": "Alligator crack",
+   "confidence": 0.86,
+   "visual_severity": 0.75,
+   "severity_label": "severe",
+   "x": -16.2,
+   "z": 37.5,
+   "t": 0.55,
+   "lane": 1.5,
+   "detected_on": "2026-11-13",
+   "inspection_id": "INS-ST-2-003",
+   "bbox": [
+    0.3275,
+    0.341,
+    0.443,
+    0.4631
+   ],
+   "image_url": "/static/demo/DEF-0010.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 45.2,
+   "band": "medium",
+   "factors": {
+    "D": 63.8,
+    "T": 60.0,
+    "V": 54.3,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.75 \u00d7 alligator crack weight 0.85",
+    "T": "collector road class",
+    "V": "school 65 m (28.2) + bus stop 20 m (26.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d763.8 + 0.20\u00d760.0 + 0.20\u00d754.3 + 0.15\u00d70.0 + 0.10\u00d70.0 = 45.2",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-SCH-2",
+     "kind": "school",
+     "name": "Sunrise High School (demo)",
+     "distance_m": 65.0,
+     "points": 28.2
+    },
+    {
+     "id": "CTX-BUS-3",
+     "kind": "bus_stop",
+     "name": "Bus stop, Station Road (demo)",
+     "distance_m": 20.0,
+     "points": 26.1
+    }
+   ],
+   "reasons": [
+    "Alligator crack with severe visual severity (D 64).",
+    "Station Road is a collector road (T 60).",
+    "Within 150 m of Sunrise High School (demo) (65 m), Bus stop, Station Road (demo) (20 m) (V 54).",
+    "Suggested action: Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Full-depth patch: remove the cracked area and repair the base layer, because alligator cracking usually means the layers underneath are failing. Schedule the repair within 1 month.",
+   "previous_records": []
+  },
+  {
+   "id": "DEF-0014",
+   "segment_id": "MG-1",
+   "road_name": "MG Road",
+   "type": "pothole",
+   "type_label": "Pothole",
+   "confidence": 0.9,
+   "visual_severity": 0.75,
+   "severity_label": "severe",
+   "x": -48.0,
+   "z": 1.0,
+   "t": 0.5,
+   "lane": 1.0,
+   "detected_on": "2026-11-14",
+   "inspection_id": "INS-MG-1-002",
+   "bbox": [
+    0.3119,
+    0.3783,
+    0.284,
+    0.2793
+   ],
+   "image_url": "/static/demo/DEF-0014.jpg",
+   "model_label": "demo record",
+   "source": "demo",
+   "status": "open",
+   "rps": 49.6,
+   "band": "medium",
+   "factors": {
+    "D": 75.0,
+    "T": 90.0,
+    "V": 26.8,
+    "R": 0.0,
+    "W": 0.0
+   },
+   "factor_details": {
+    "D": "100 \u00d7 visual severity 0.75 \u00d7 pothole weight 1.00",
+    "T": "arterial road class",
+    "V": "school 96 m (18.2) + pedestrian crossing 112 m (7.5) + bus stop 144 m (1.1)",
+    "R": "0 earlier record(s) within 10 m",
+    "W": "0 waterlogging \u00d7 25 + 0 drainage \u00d7 15"
+   },
+   "calculation": "0.35\u00d775.0 + 0.20\u00d790.0 + 0.20\u00d726.8 + 0.15\u00d70.0 + 0.10\u00d70.0 = 49.6",
+   "annotated_image_url": null,
+   "nearby": [
+    {
+     "id": "CTX-SCH-1",
+     "kind": "school",
+     "name": "Govt. Primary School (demo)",
+     "distance_m": 96.0,
+     "points": 18.2
+    },
+    {
+     "id": "CTX-PX-1",
+     "kind": "pedestrian_crossing",
+     "name": "School Lane crossing (demo)",
+     "distance_m": 112.0,
+     "points": 7.5
+    },
+    {
+     "id": "CTX-BUS-1",
+     "kind": "bus_stop",
+     "name": "Bus stop, MG Road West (demo)",
+     "distance_m": 144.0,
+     "points": 1.1
+    }
+   ],
+   "reasons": [
+    "Pothole with severe visual severity (D 75).",
+    "MG Road is an arterial road (T 90).",
+    "Within 150 m of Govt. Primary School (demo) (96 m), School Lane crossing (demo) (112 m), Bus stop, MG Road West (demo) (144 m) (V 27).",
+    "Suggested action: Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month."
+   ],
+   "recurrence_of": [],
+   "possible_recurrence": false,
+   "recommendation": "Patch the pothole: cut the edges square, clean out loose material and water, fill and compact (cold mix as a temporary fix, hot mix as the permanent repair). Schedule the repair within 1 month.",
+   "previous_records": []
+  }
+ ],
+ "inspections": [
+  {
+   "id": "INS-LV-2-095",
+   "segment_id": "LV-2",
+   "inspected_on": "2026-08-13",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MK-3-070",
+   "segment_id": "MK-3",
+   "inspected_on": "2026-09-07",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-SL-1-064",
+   "segment_id": "SL-1",
+   "inspected_on": "2026-09-13",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-1-052",
+   "segment_id": "HA-1",
+   "inspected_on": "2026-09-25",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-SL-2-048",
+   "segment_id": "SL-2",
+   "inspected_on": "2026-09-29",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MG-4-045",
+   "segment_id": "MG-4",
+   "inspected_on": "2026-10-02",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-SL-3-040",
+   "segment_id": "SL-3",
+   "inspected_on": "2026-10-07",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-LV-3-033",
+   "segment_id": "LV-3",
+   "inspected_on": "2026-10-14",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MK-2-028",
+   "segment_id": "MK-2",
+   "inspected_on": "2026-10-19",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-2-026",
+   "segment_id": "HA-2",
+   "inspected_on": "2026-10-21",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-SL-3-025",
+   "segment_id": "SL-3",
+   "inspected_on": "2026-10-22",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-3-020",
+   "segment_id": "HA-3",
+   "inspected_on": "2026-10-27",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-ST-3-018",
+   "segment_id": "ST-3",
+   "inspected_on": "2026-10-29",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-2-015",
+   "segment_id": "HA-2",
+   "inspected_on": "2026-11-01",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MG-3-012",
+   "segment_id": "MG-3",
+   "inspected_on": "2026-11-04",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-4-010",
+   "segment_id": "HA-4",
+   "inspected_on": "2026-11-06",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-SL-2-009",
+   "segment_id": "SL-2",
+   "inspected_on": "2026-11-07",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MK-3-007",
+   "segment_id": "MK-3",
+   "inspected_on": "2026-11-09",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-HA-2-006",
+   "segment_id": "HA-2",
+   "inspected_on": "2026-11-10",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MG-2-004",
+   "segment_id": "MG-2",
+   "inspected_on": "2026-11-12",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-ST-2-003",
+   "segment_id": "ST-2",
+   "inspected_on": "2026-11-13",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  },
+  {
+   "id": "INS-MG-1-002",
+   "segment_id": "MG-1",
+   "inspected_on": "2026-11-14",
+   "method": "vehicle camera (demo)",
+   "notes": null,
+   "source": "demo"
+  }
+ ],
+ "repairs": [
+  {
+   "id": "REP-002",
+   "defect_id": "DEF-0009",
+   "segment_id": "MK-3",
+   "submitted_on": "2026-09-11",
+   "verified_on": "2026-09-17",
+   "status": "verified",
+   "display_status": "verified",
+   "crew": "Ward 7 road maintenance crew (demo)",
+   "before_image_url": "/static/demo/DEF-0009.jpg",
+   "after_image_url": "/static/demo/REP-002.jpg",
+   "later_defects_nearby": [],
+   "source": "demo"
+  },
+  {
+   "id": "REP-004",
+   "defect_id": "DEF-0005",
+   "segment_id": "SL-2",
+   "submitted_on": "2026-10-07",
+   "verified_on": "2026-10-14",
+   "status": "verified",
+   "display_status": "verified",
+   "crew": "Ward 2 road maintenance crew (demo)",
+   "before_image_url": "/static/demo/DEF-0005.jpg",
+   "after_image_url": "/static/demo/REP-004.jpg",
+   "later_defects_nearby": [],
+   "source": "demo"
+  },
+  {
+   "id": "REP-003",
+   "defect_id": "DEF-0013",
+   "segment_id": "SL-3",
+   "submitted_on": "2026-10-17",
+   "verified_on": "2026-10-22",
+   "status": "verified",
+   "display_status": "verified",
+   "crew": "Ward 2 road maintenance crew (demo)",
+   "before_image_url": "/static/demo/DEF-0013.jpg",
+   "after_image_url": "/static/demo/REP-003.jpg",
+   "later_defects_nearby": [],
+   "source": "demo"
+  },
+  {
+   "id": "REP-001",
+   "defect_id": "DEF-0001",
+   "segment_id": "HA-2",
+   "submitted_on": "2026-10-25",
+   "verified_on": null,
+   "status": "pending_verification",
+   "display_status": "reinspection_recommended",
+   "crew": "Ward 4 road maintenance crew (demo)",
+   "before_image_url": "/static/demo/DEF-0001.jpg",
+   "after_image_url": "/static/demo/REP-001.jpg",
+   "later_defects_nearby": [
+    "DEF-0002"
+   ],
+   "source": "demo"
+  },
+  {
+   "id": "REP-005",
+   "defect_id": "DEF-0011",
+   "segment_id": "LV-3",
+   "submitted_on": "2026-11-11",
+   "verified_on": null,
+   "status": "submitted",
+   "display_status": "submitted",
+   "crew": "Ward 5 road maintenance crew (demo)",
+   "before_image_url": "/static/demo/DEF-0011.jpg",
+   "after_image_url": "/static/demo/REP-005.jpg",
+   "later_defects_nearby": [],
+   "source": "demo"
+  }
+ ],
+ "metrics": {
+  "total_defects": 14,
+  "critical_roads": 1,
+  "high_roads": 1,
+  "recurring_damage": 1,
+  "inspected_sections": 12,
+  "tracked_sections": 21,
+  "total_sections": 24,
+  "pending_repair_verification": 2,
+  "reports_total": 17,
+  "reports_open": 12,
+  "reports_awaiting_verification": 2,
+  "reports_repaired": 3,
+  "reports_by_band": {
+   "medium": 8,
+   "low": 3,
+   "high": 2,
+   "critical": 1
+  },
+  "sections_by_band": {
+   "none": 12,
+   "medium": 7,
+   "low": 3,
+   "high": 1,
+   "critical": 1
+  },
+  "sections_with_open_damage": 12,
+  "repairs_total": 5,
+  "repairs_awaiting": 1,
+  "repairs_reinspection": 1,
+  "repairs_verified": 3,
+  "inspected_pct": 50.0,
+  "sections_needing_inspection": 9,
+  "dataset": "demo",
+  "monsoon_watchlist": 6,
+  "by_type": {
+   "alligator_crack": 3,
+   "transverse_crack": 2,
+   "pothole": 7,
+   "longitudinal_crack": 2
+  },
+  "by_band": {
+   "medium": 8,
+   "low": 3,
+   "high": 2,
+   "critical": 1
+  },
+  "by_coverage": {
+   "never": 4,
+   "overdue": 5,
+   "unknown": 3,
+   "recent": 12
+  },
+  "by_repair_status": {
+   "verified": 3,
+   "reinspection_recommended": 1,
+   "submitted": 1
+  },
+  "sources": {
+   "demo": 17
+  }
+ }
+}

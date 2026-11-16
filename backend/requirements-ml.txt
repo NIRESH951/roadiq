@@ -1,0 +1,2 @@
+# Optional: only needed to run a trained road-damage detector (see README "AI model").
+ultralytics>=8.3

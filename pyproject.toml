@@ -1,0 +1,16 @@
+# Used by Vercel for the full-stack deployment (FastAPI API + the pre-built UI in frontend/dist).
+# Local development still uses backend/requirements.txt; keep the two dependency lists in sync.
+[project]
+name = "roadiq"
+version = "1.0.0"
+description = "AI-Powered Road Intelligence & Safer Street Prioritization"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110",
+    "sqlalchemy>=2.0",
+    "python-multipart>=0.0.9",
+    "pillow>=10.1",
+]
+
+[tool.vercel]
+entrypoint = "backend.app.main:app"

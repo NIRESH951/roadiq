@@ -1,0 +1,1 @@
+{"box_mAP50": 0.765, "box_mAP50-95": 0.551, "box_precision": 0.824, "box_recall": 0.711, "dataset": "Ultralytics crack-seg, 200 validation images", "epochs": 15}
