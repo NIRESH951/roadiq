@@ -9,7 +9,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROJECT_DIR = BASE_DIR.parent
-SEED_FILE = PROJECT_DIR / "shared" / "demo_city.json"
+SEED_FILE = (BASE_DIR / "shared" / "demo_city.json") if (BASE_DIR / "shared" / "demo_city.json").is_file() else (PROJECT_DIR / "shared" / "demo_city.json")
 STATIC_DIR = BASE_DIR / "static"
 DEMO_IMAGE_DIR = STATIC_DIR / "demo"
 # On Vercel (VERCEL=1) the project files are read-only and only /tmp is writable, so the demo database and

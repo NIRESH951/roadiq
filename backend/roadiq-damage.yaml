@@ -1,0 +1,5 @@
+train: ["C:\\Users\\krish\\Downloads\\RoadIQ-3D (3)\\roadiq\\backend\\datasets\\crack-seg\\images\\train", "C:/Users/krish/Downloads/RoadIQ-3D (3)/roadiq/backend/datasets/pothole/images/train"]
+val: ["C:\\Users\\krish\\Downloads\\RoadIQ-3D (3)\\roadiq\\backend\\datasets\\crack-seg\\images\\val", "C:/Users/krish/Downloads/RoadIQ-3D (3)/roadiq/backend/datasets/pothole/images/val"]
+names:
+  0: crack
+  1: pothole

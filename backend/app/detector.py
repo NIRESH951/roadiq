@@ -160,3 +160,61 @@ class Detector:
 
 
 detector = Detector()
+
+# --- RoadIQ: crack sub-type from the box shape (an estimate, NOT a model class) ---
+# The model says "crack"; the long/wide/area shape of its box decides longitudinal,
+# transverse or alligator. The model label is marked so the UI shows it is an estimate.
+def _crack_type_from_shape(w_px, h_px, area_frac):
+    aspect = w_px / max(h_px, 1e-6)
+    if area_frac >= 0.10 and 0.5 <= aspect <= 2.0:
+        return "alligator_crack"
+    if aspect <= 0.6:
+        return "longitudinal_crack"
+    if aspect >= 1.67:
+        return "transverse_crack"
+    return "alligator_crack" if area_frac >= 0.04 else "crack"
+
+
+_model_predict = Detector.predict
+
+
+def _predict_with_crack_type(self, image_path):
+    dets = _model_predict(self, image_path)
+    if not any(d.get("type") == "crack" for d in dets):
+        return dets
+    from PIL import Image as _Img
+    with _Img.open(image_path) as im:
+        W, H = im.size
+    for d in dets:
+        if d.get("type") != "crack":
+            continue
+        _, _, w, h = d["bbox"]
+        sub = _crack_type_from_shape(w * W, h * H, w * h)
+        if sub != "crack":
+            d["type"] = sub
+            d["model_label"] = f"{d.get('model_label') or 'crack'} (type estimated from crack shape)"
+    return dets
+
+
+Detector.predict = _predict_with_crack_type
+
+# --- RoadIQ fix: let the model's "crack" class through (older label map dropped it) ---
+_label_from_map = normalise_label
+
+
+def normalise_label(raw):
+    if str(raw).strip().lower() in ("crack", "cracks"):
+        return "crack"
+    return _label_from_map(raw)
+
+
+from . import config as _cfg
+
+if "crack" not in getattr(_cfg, "DAMAGE_TYPE_WEIGHT", {}):
+    _shape_estimate = _crack_type_from_shape
+
+    def _crack_type_from_shape(w_px, h_px, area_frac):
+        t = _shape_estimate(w_px, h_px, area_frac)
+        if t == "crack":
+            t = "longitudinal_crack" if h_px >= w_px else "transverse_crack"
+        return t

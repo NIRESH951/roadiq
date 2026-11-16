@@ -1,0 +1,13 @@
+[project]
+name = "roadiq-backend"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110",
+    "sqlalchemy>=2.0",
+    "python-multipart>=0.0.9",
+    "pillow>=10.1",
+]
+
+[tool.vercel]
+entrypoint = "app.main:app"

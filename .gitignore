@@ -15,3 +15,4 @@ runs/
 datasets/
 *.pt
 download.py
+.vercel
